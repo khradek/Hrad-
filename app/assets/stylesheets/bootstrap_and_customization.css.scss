@@ -1,0 +1,22 @@
+
+$jumbotron-bg:                    #bdc3c7;
+$navbar-height:                   45px;
+$navbar-default-bg:               white;
+
+@import'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.resizedTextbox {height: 10px}
+
+.headerTextbox {width: 500px; height: 20px}
+
+.tables{ 
+	border-collapse:collapse; table-layout:fixed; width:auto;
+}
+
+.container .jumbotron {
+	padding:1px 175px;
+}
