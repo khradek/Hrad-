@@ -1,0 +1,27 @@
+<h1>Listing piece4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @piece4s.each do |piece4| %>
+      <tr>
+        <td><%= piece4.name %></td>
+        <td><%= piece4.user_id %></td>
+        <td><%= link_to 'Show', piece4 %></td>
+        <td><%= link_to 'Edit', edit_piece4_path(piece4) %></td>
+        <td><%= link_to 'Destroy', piece4, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Piece4', new_piece4_path %>
