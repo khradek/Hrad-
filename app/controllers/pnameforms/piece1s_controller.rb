@@ -1,34 +1,42 @@
-class Piece1sController < ApplicationController
+class Pnameforms::Piece1sController < ApplicationController
   before_action :set_piece1, only: [:show, :edit, :update, :destroy]
 
   # GET /piece1s
   # GET /piece1s.json
   def index
-    @piece1s = Piece1.all
+    @pnameform = Pnameform.find(params[:pnameform_id]) 
+    @piece1s = @pnameform.piece1s
   end
 
   # GET /piece1s/1
   # GET /piece1s/1.json
   def show
+    @pnameform = Pnameform.find(params[:pnameform_id]) 
+    @piece1s = Piece1.all    
   end
 
   # GET /piece1s/new
   def new
-    @piece1 = Piece1.new
+    @pnameform = Pnameform.find(params[:pnameform_id]) 
+    @piece1 = Piece1.new 
   end
 
   # GET /piece1s/1/edit
   def edit
+    @pnameform = Pnameform.find(params[:pnameform_id]) 
+    @piece1.pnameform = @pnameform 
   end
 
   # POST /piece1s
   # POST /piece1s.json
   def create
+    @pnameform = Pnameform.find(params[:pnameform_id]) 
     @piece1 = Piece1.new(piece1_params)
+    @piece1.pnameform = @pnameform 
 
     respond_to do |format|
       if @piece1.save
-        format.html { redirect_to @piece1, notice: 'Piece1 was successfully created.' }
+        format.html { redirect_to pnameform_piece1s_path(@pnameform), notice: 'Piece1 was successfully created.' }
         format.json { render :show, status: :created, location: @piece1 }
       else
         format.html { render :new }
@@ -40,9 +48,12 @@ class Piece1sController < ApplicationController
   # PATCH/PUT /piece1s/1
   # PATCH/PUT /piece1s/1.json
   def update
+    @pnameform = Pnameform.find(params[:pnameform_id]) 
+    @piece1.pnameform = @pnameform 
+
     respond_to do |format|
       if @piece1.update(piece1_params)
-        format.html { redirect_to @piece1, notice: 'Piece1 was successfully updated.' }
+        format.html { redirect_to pnameform_piece1s_path(@pnameform), notice: 'Piece1 was successfully updated.' }
         format.json { render :show, status: :ok, location: @piece1 }
       else
         format.html { render :edit }
@@ -54,10 +65,16 @@ class Piece1sController < ApplicationController
   # DELETE /piece1s/1
   # DELETE /piece1s/1.json
   def destroy
-    @piece1.destroy
-    respond_to do |format|
-      format.html { redirect_to piece1s_url, notice: 'Piece1 was successfully destroyed.' }
-      format.json { head :no_content }
+    @pnameform = Pnameform.find(params[:pnameform_id]) 
+    @piece1 = Piece1.find(params[:id])
+    title = @piece1.name
+
+    if @piece1.destroy
+      flash[:notice] = "\"#{title}\" was deleted successfully."
+      redirect_to pnameform_piece1s_path(@pnameform)
+    else
+      flash[:error] = "There was an error deleting."
+      render :show 
     end
   end
 

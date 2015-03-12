@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<div style+"float: left"> 
+  <table class="table table-bordered">
+    <tr>
+      <td><%= @pnameform.pname1 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname1}s ", pnameform_piece1s_path(@pnameform) %></td> 
+    </tr>
+    <tr>
+      <td><%= @pnameform.pname2 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname2}s", piece2s_path %></td> 
+    </tr>
+    <tr>
+      <td><%= @pnameform.pname3 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname3}s", piece3s_path %></td> 
+    </tr>     
+    <tr>
+      <td><%= @pnameform.pname4 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname4}s", piece4s_path %></td> 
+    </tr>
+    <tr>
+      <td><%= @pnameform.pname5 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname5}s", piece5s_path %></td> 
+    </tr>
+    <tr>
+      <td><%= @pnameform.pname6 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname6}s", piece6s_path %></td> 
+    </tr>
+    <tr>
+      <td><%= @pnameform.pname7 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname7}s", piece7s_path %></td> 
+    </tr>
+    <tr>
+      <td><%= @pnameform.pname8 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname8}s", piece8s_path %></td> 
+    </tr>
+    <tr>
+        <td><%= @pnameform.pname9 %></td>      
+        <td><%= link_to "Add or Edit #{@pnameform.pname9}s", piece9s_path %></td>  
+    </tr>
+    <tr>
+      <td><%= @pnameform.pname10 %></td>      
+      <td><%= link_to "Add or Edit #{@pnameform.pname10}s", piece10s_path %></td> 
+    </tr> 
+  </table>                      
+</div> 
+
+
+<%= link_to 'Edit', edit_pnameform_path(@pnameform) %> |
+<%= link_to 'Back', pnameforms_path %>

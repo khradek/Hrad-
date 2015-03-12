@@ -1,4 +1,4 @@
-<%= form_for(@piece1) do |f| %>
+<%= form_for [@pnameform, @piece1] do |f| %>
   <% if @piece1.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@piece1.errors.count, "error") %> prohibited this piece1 from being saved:</h2>
@@ -15,10 +15,7 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

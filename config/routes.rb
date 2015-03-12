@@ -1,4 +1,9 @@
-Rails.application.routes.draw do
+Hrad::Application.routes.draw do
+  
+  resources :pnameforms do
+    resources :piece1s, controller: 'pnameforms/piece1s'
+  end 
+    
   resources :piece10s
 
   resources :piece9s
@@ -17,9 +22,8 @@ Rails.application.routes.draw do
 
   resources :piece2s
 
-  resources :piece1s
-
   devise_for :users, :controllers => { :registrations => "registrations" }
+  
   root 'pages#home'
   get "piece" => 'pages#piece'
   get "database" => 'pages#database'

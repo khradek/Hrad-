@@ -14,7 +14,7 @@ class Piece2sController < ApplicationController
 
   # GET /piece2s/new
   def new
-    @piece2 = Piece2.new
+    @piece2 = current_user.piece2s.build 
   end
 
   # GET /piece2s/1/edit
@@ -24,7 +24,7 @@ class Piece2sController < ApplicationController
   # POST /piece2s
   # POST /piece2s.json
   def create
-    @piece2 = Piece2.new(piece2_params)
+    @piece2 = current_user.piece2s.build(piece2_params)
 
     respond_to do |format|
       if @piece2.save

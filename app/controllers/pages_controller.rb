@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   def piece
   end 
 
-  def database
+  def database 	
   end	
 end

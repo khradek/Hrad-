@@ -1,0 +1,62 @@
+<%= form_for(@pnameform) do |f| %>
+  <% if @pnameform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pnameform.errors.count, "error") %> prohibited this pnameform from being saved:</h2>
+
+      <ul>
+      <% @pnameform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :pname1 %><br>
+    <%= f.text_field :pname1, class: "from-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :pname2 %><br>
+    <%= f.text_field :pname2 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname3 %><br>
+    <%= f.text_field :pname3 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname4 %><br>
+    <%= f.text_field :pname4 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname5 %><br>
+    <%= f.text_field :pname5 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname6 %><br>
+    <%= f.text_field :pname6 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname6 %><br>
+    <%= f.text_field :pname6 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname7 %><br>
+    <%= f.text_field :pname7 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname8 %><br>
+    <%= f.text_field :pname8 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname9 %><br>
+    <%= f.text_field :pname9 %>
+  </div>
+  <div class="field">
+    <%= f.label :pname10 %><br>
+    <%= f.text_field :pname10 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

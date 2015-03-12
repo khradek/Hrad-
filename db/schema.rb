@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307000841) do
+ActiveRecord::Schema.define(version: 20150312193612) do
 
   create_table "piece10s", force: true do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150307000841) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece2s", force: true do |t|
@@ -83,6 +84,37 @@ ActiveRecord::Schema.define(version: 20150307000841) do
     t.datetime "updated_at"
   end
 
+  create_table "pnameforms", force: true do |t|
+    t.string   "pname1"
+    t.string   "pname2"
+    t.string   "pname3"
+    t.string   "pname4"
+    t.string   "pname5"
+    t.string   "pname6"
+    t.string   "pname7"
+    t.string   "pname8"
+    t.string   "pname9"
+    t.string   "pname10"
+    t.string   "pname11"
+    t.string   "pname12"
+    t.string   "pname13"
+    t.string   "pname14"
+    t.string   "pname15"
+    t.string   "pname16"
+    t.string   "pname17"
+    t.string   "pname18"
+    t.string   "pname19"
+    t.string   "pname20"
+    t.string   "pname21"
+    t.string   "pname22"
+    t.string   "pname23"
+    t.string   "pname24"
+    t.string   "pname25"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -96,6 +128,31 @@ ActiveRecord::Schema.define(version: 20150307000841) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "pname1"
+    t.string   "pname2"
+    t.string   "pname3"
+    t.string   "pname4"
+    t.string   "pname5"
+    t.string   "pname6"
+    t.string   "pname7"
+    t.string   "pname8"
+    t.string   "pname9"
+    t.string   "pname10"
+    t.string   "pname11"
+    t.string   "pname12"
+    t.string   "pname13"
+    t.string   "pname14"
+    t.string   "pname15"
+    t.string   "pname16"
+    t.string   "pname17"
+    t.string   "pname18"
+    t.string   "pname19"
+    t.string   "pname20"
+    t.string   "pname21"
+    t.string   "pname22"
+    t.string   "pname23"
+    t.string   "pname24"
+    t.string   "pname25"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

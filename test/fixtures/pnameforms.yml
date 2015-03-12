@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pname1: MyString
+  pname2: MyString
+  pname3: MyString
+  pname4: MyString
+  pname5: MyString
+  pname6: MyString
+
+two:
+  pname1: MyString
+  pname2: MyString
+  pname3: MyString
+  pname4: MyString
+  pname5: MyString
+  pname6: MyString
