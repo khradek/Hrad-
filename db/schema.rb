@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312193612) do
+ActiveRecord::Schema.define(version: 20150313193330) do
 
   create_table "piece10s", force: true do |t|
     t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece1s", force: true do |t|
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece3s", force: true do |t|
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece4s", force: true do |t|
@@ -47,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece5s", force: true do |t|
@@ -54,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece6s", force: true do |t|
@@ -61,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece7s", force: true do |t|
@@ -68,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece8s", force: true do |t|
@@ -75,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "piece9s", force: true do |t|
@@ -82,6 +90,7 @@ ActiveRecord::Schema.define(version: 20150312193612) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pnameform_id"
   end
 
   create_table "pnameforms", force: true do |t|

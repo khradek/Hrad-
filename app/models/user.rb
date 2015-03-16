@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :pnameforms       
+  has_one :pnameform       
 
   has_many :piece1s    
   has_many :piece2s 

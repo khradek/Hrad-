@@ -2,31 +2,20 @@ Hrad::Application.routes.draw do
   
   resources :pnameforms do
     resources :piece1s, controller: 'pnameforms/piece1s'
-  end 
-    
-  resources :piece10s
-
-  resources :piece9s
-
-  resources :piece8s
-
-  resources :piece7s
-
-  resources :piece6s
-
-  resources :piece5s
-
-  resources :piece4s
-
-  resources :piece3s
-
-  resources :piece2s
+    resources :piece2s, controller: 'pnameforms/piece2s'
+    resources :piece3s, controller: 'pnameforms/piece3s'
+    resources :piece4s, controller: 'pnameforms/piece4s'
+    resources :piece5s, controller: 'pnameforms/piece5s'
+    resources :piece6s, controller: 'pnameforms/piece6s'
+    resources :piece7s, controller: 'pnameforms/piece7s'
+    resources :piece8s, controller: 'pnameforms/piece8s'
+    resources :piece9s, controller: 'pnameforms/piece9s'
+    resources :piece10s, controller: 'pnameforms/piece10s'
+  end     
 
   devise_for :users, :controllers => { :registrations => "registrations" }
   
   root 'pages#home'
-  get "piece" => 'pages#piece'
-  get "database" => 'pages#database'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

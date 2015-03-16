@@ -1,35 +1,31 @@
-<h1>Listing pnameforms</h1>
+<h1>My Database</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Pname1</th>
-      <th>Pname2</th>
-      <th>Pname3</th>
-      <th>Pname4</th>
-      <th>Pname5</th>
-      <th>Pname6</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @pnameforms.each do |pnameform| %>
-      <tr>
-        <td><%= pnameform.pname1 %></td>
-        <td><%= pnameform.pname2 %></td>
-        <td><%= pnameform.pname3 %></td>
-        <td><%= pnameform.pname4 %></td>
-        <td><%= pnameform.pname5 %></td>
-        <td><%= pnameform.pname6 %></td>
-        <td><%= link_to 'Show', pnameform %></td>
-        <td><%= link_to 'Edit', edit_pnameform_path(pnameform) %></td>
-        <td><%= link_to 'Destroy', pnameform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @pnameforms.each do |pnameform| %>
+          <tr>
+            <% if pnameform.user == current_user %> 
+              <td><%= pnameform.user.email if pnameform.user %></td>
+              <td><%= link_to 'Add & Update', pnameform %></td>
+              <td><%= link_to 'Edit Title Names', edit_pnameform_path(pnameform) %></td> 
+            <% end %>   
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<br>
+  
 
-<%= link_to 'New Pnameform', new_pnameform_path %>
+
+
