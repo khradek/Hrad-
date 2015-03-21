@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313193330) do
+ActiveRecord::Schema.define(version: 20150321140641) do
 
   create_table "piece10s", force: true do |t|
     t.string   "name"
@@ -21,12 +21,132 @@ ActiveRecord::Schema.define(version: 20150313193330) do
     t.integer  "pnameform_id"
   end
 
+  create_table "piece11s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece12s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece13s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece14s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece15s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece16s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece17s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece18s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece19s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "piece1s", force: true do |t|
     t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "pnameform_id"
+  end
+
+  create_table "piece20s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece21s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece22s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece23s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece24s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "piece25s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "pnameform_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "piece2s", force: true do |t|

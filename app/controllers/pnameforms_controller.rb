@@ -23,6 +23,21 @@ class PnameformsController < ApplicationController
     @piece8s = @pnameform.piece8s
     @piece9s = @pnameform.piece9s
     @piece10s = @pnameform.piece10s
+    @piece11s = @pnameform.piece11s
+    @piece12s = @pnameform.piece12s
+    @piece13s = @pnameform.piece13s
+    @piece14s = @pnameform.piece14s
+    @piece15s = @pnameform.piece15s
+    @piece16s = @pnameform.piece16s
+    @piece17s = @pnameform.piece17s
+    @piece18s = @pnameform.piece18s
+    @piece19s = @pnameform.piece19s
+    @piece20s = @pnameform.piece20s
+    @piece21s = @pnameform.piece21s
+    @piece22s = @pnameform.piece22s
+    @piece23s = @pnameform.piece23s
+    @piece24s = @pnameform.piece24s
+    @piece25s = @pnameform.piece25s
   end
 
   # GET /pnameforms/new
@@ -86,7 +101,7 @@ class PnameformsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pnameform_params
-      params.require(:pnameform).permit(:pname1, :pname2, :pname3, :pname4, :pname5, :pname6, :pname7, :pname8, :pname9, :pname10)
+      params.require(:pnameform).permit(:pname1, :pname2, :pname3, :pname4, :pname5, :pname6, :pname7, :pname8, :pname9, :pname10, :pname11, :pname12, :pname13, :pname14, :pname15, :pname16, :pname17, :pname18, :pname19, :pname20, :pname21, :pname22, :pname23, :pname24, :pname25)
     end  
 end
 
