@@ -18,7 +18,7 @@ class Pnameforms::Piece21sController < ApplicationController
   # GET /piece21s/new
   def new
     @pnameform = Pnameform.find(params[:pnameform_id]) 
-    @piece21 = Piece21.new 
+    @piece21 = current_user.piece21s.build
   end
 
   # GET /piece21s/21/edit
@@ -31,7 +31,7 @@ class Pnameforms::Piece21sController < ApplicationController
   # POST /piece21s.json
   def create
     @pnameform = Pnameform.find(params[:pnameform_id]) 
-    @piece21 = Piece21.new(piece21_params)
+    @piece21 = current_user.piece21s.build(piece21_params)
     @piece21.pnameform = @pnameform 
 
     respond_to do |format|

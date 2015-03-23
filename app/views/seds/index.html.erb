@@ -1,0 +1,24 @@
+<h1>My Sessions</h1>
+
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <tbody>
+        <% @seds.each do |sed| %>
+          <tr>
+            <% if sed.user == current_user %>
+              <td><%= sed.name %></td>
+              <td><%= link_to 'Open', sed %></td>
+              <td><%= link_to 'Edit Session Name', edit_sed_path(sed) %></td>
+              <td><%= link_to 'Delete', sed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>  
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>    
+
+<br>
+
+<%= link_to 'New Session', new_sed_path %>

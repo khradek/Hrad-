@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sed.name %>
+  <%= link_to 'Edit Name', edit_sed_path(@sed), class: 'pull-right' %>
+</p>
+
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Install Plays</th>
+        </tr>   
+      </thead>
+      <tbody>
+        <% @plays.each do |play| %>
+          <tr>
+            <td><%= play.fullname %></td>
+            <td><%= link_to 'Edit', edit_sed_play_path(@sed, play) %>
+            <td><%= link_to 'Delete', [@sed, play], method: :delete, confirm: "Are you sure?" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div> 		
+
+<%= link_to "Add new play", new_sed_play_path(@sed), class: 'pull-right' %>
+<br>
+<%= link_to 'Back', seds_path %>

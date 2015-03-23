@@ -1,5 +1,5 @@
 Hrad::Application.routes.draw do
-  
+    
   resources :pnameforms do
     resources :piece1s, controller: 'pnameforms/piece1s'
     resources :piece2s, controller: 'pnameforms/piece2s'
@@ -29,6 +29,10 @@ Hrad::Application.routes.draw do
   end     
 
   devise_for :users, :controllers => { :registrations => "registrations" }
+
+  resources :seds do
+    resources :plays, controller: 'seds/plays'
+  end 
   
   root 'pages#home'
 

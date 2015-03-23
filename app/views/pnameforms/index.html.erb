@@ -13,7 +13,7 @@
       <tbody>
         <% @pnameforms.each do |pnameform| %>
           <tr>
-            <% if pnameform.user == current_user %> 
+            <% if pnameform.user == current_user %>
               <td><%= pnameform.user.email if pnameform.user %></td>
               <td><%= link_to 'Add & Update', pnameform %></td>
               <td><%= link_to 'Edit Title Names', edit_pnameform_path(pnameform) %></td> 

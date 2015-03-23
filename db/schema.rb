@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321140641) do
+ActiveRecord::Schema.define(version: 20150322141058) do
 
   create_table "piece10s", force: true do |t|
     t.string   "name"
@@ -213,6 +213,37 @@ ActiveRecord::Schema.define(version: 20150321140641) do
     t.integer  "pnameform_id"
   end
 
+  create_table "plays", force: true do |t|
+    t.string   "piece1"
+    t.string   "piece2"
+    t.string   "piece3"
+    t.string   "piece4"
+    t.string   "piece5"
+    t.string   "piece6"
+    t.string   "piece7"
+    t.string   "piece8"
+    t.string   "piece9"
+    t.string   "piece10"
+    t.string   "piece11"
+    t.string   "piece12"
+    t.string   "piece13"
+    t.string   "piece14"
+    t.string   "piece15"
+    t.string   "piece16"
+    t.string   "piece17"
+    t.string   "piece18"
+    t.string   "piece19"
+    t.string   "piece20"
+    t.string   "piece21"
+    t.string   "piece22"
+    t.string   "piece23"
+    t.string   "piece24"
+    t.string   "piece25"
+    t.integer  "sed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "pnameforms", force: true do |t|
     t.string   "pname1"
     t.string   "pname2"
@@ -242,6 +273,13 @@ ActiveRecord::Schema.define(version: 20150321140641) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "seds", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

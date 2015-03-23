@@ -1,0 +1,195 @@
+<%= form_for [@sed, @play] do |f| %>
+  <% if @play.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@play.errors.count, "error") %> prohibited this play from being saved:</h2>
+
+      <ul>
+      <% @play.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :piece1, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece1, current_user.piece1s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece2, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece2, current_user.piece2s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece3, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece3, current_user.piece3s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece4, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece4, current_user.piece4s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece5, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece5, current_user.piece5s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece6, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece6, current_user.piece6s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece7, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece7, current_user.piece7s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece8, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece8, current_user.piece8s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece9, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece9, current_user.piece9s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :piece10, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece10, current_user.piece10s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>        
+
+  <div class="control-group">
+    <%= f.label :piece11, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece11, current_user.piece11s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece12, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece12, current_user.piece12s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece13, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece13, current_user.piece13s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece14, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece14, current_user.piece14s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece15, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece15, current_user.piece15s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece16, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece16, current_user.piece16s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece17, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece17, current_user.piece17s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece18, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece18, current_user.piece18s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece19, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece19, current_user.piece19s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece20, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece20, current_user.piece20s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece21, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece21, current_user.piece21s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece22, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece22, current_user.piece22s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece23, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece23, current_user.piece23s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece24, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece24, current_user.piece24s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>  
+
+  <div class="control-group">
+    <%= f.label :piece25, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :play, :piece25, current_user.piece25s, :name, :name, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>  
+  </div>            
+
+
+        
+  <br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
