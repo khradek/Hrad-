@@ -1,0 +1,49 @@
+<%= form_for(@script) do |f| %>
+  <% if @script.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@script.errors.count, "error") %> prohibited this script from being saved:</h2>
+
+      <ul>
+      <% @script.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :play1 %><br>
+    <%= f.text_field :play1 %>
+  </div>
+  <div class="field">
+    <%= f.label :hash1 %><br>
+    <%= f.text_field :hash1 %>
+  </div>
+  <div class="field">
+    <%= f.label :down1 %><br>
+    <%= f.text_field :down1 %>
+  </div>
+  <div class="field">
+    <%= f.label :distance1 %><br>
+    <%= f.text_field :distance1 %>
+  </div>
+  <div class="field">
+    <%= f.label :defense1 %><br>
+    <%= f.text_field :defense1 %>
+  </div>
+  <div class="field">
+    <%= f.label :sed_id %><br>
+    <%= f.number_field :sed_id %>
+  </div>
+  <div class="field">
+    <%= f.label :situation1 %><br>
+    <%= f.text_field :situation1 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

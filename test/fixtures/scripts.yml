@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  play1: MyString
+  hash1: MyString
+  down1: MyString
+  distance1: MyString
+  defense1: MyString
+  sed_id: 1
+  situation1: MyString
+
+two:
+  name: MyString
+  play1: MyString
+  hash1: MyString
+  down1: MyString
+  distance1: MyString
+  defense1: MyString
+  sed_id: 1
+  situation1: MyString
