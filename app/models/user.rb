@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_one :pnameform  
 
   has_many :seds
+
+  has_many :scripts 
        
   has_many :piece1s    
   has_many :piece2s 

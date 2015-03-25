@@ -1,7 +1,5 @@
 Hrad::Application.routes.draw do
     
-  resources :scripts
-
   resources :pnameforms do
     resources :piece1s, controller: 'pnameforms/piece1s'
     resources :piece2s, controller: 'pnameforms/piece2s'
@@ -34,6 +32,7 @@ Hrad::Application.routes.draw do
 
   resources :seds do
     resources :plays, controller: 'seds/plays'
+    resources :scripts, controller: 'seds/scripts'
   end 
   
   root 'pages#home'

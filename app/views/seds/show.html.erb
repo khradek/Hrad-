@@ -28,5 +28,29 @@
 </div> 		
 
 <%= link_to "Add new play", new_sed_play_path(@sed), class: 'pull-right' %>
-<br>
+
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Scripts</th>
+        </tr>   
+      </thead>
+      <tbody>
+        <% @scripts.each do |script| %>
+          <tr>
+            <td><%= script.name %></td>
+            <td><%= link_to 'Edit', edit_sed_script_path(@sed, script) %>
+            <td><%= link_to 'Delete', [@sed, script], method: :delete, confirm: "Are you sure?" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>  
+
+<%= link_to "Add new script", new_sed_script_path(@sed), class: 'pull-right' %> 
+
+
 <%= link_to 'Back', seds_path %>

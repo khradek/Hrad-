@@ -1,23 +1,15 @@
-<%= form_for(@script) do |f| %>
-  <% if @script.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@script.errors.count, "error") %> prohibited this script from being saved:</h2>
+<%= form_for [@sed, @script] do |f| %>
 
-      <ul>
-      <% @script.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :play1 %><br>
-    <%= f.text_field :play1 %>
+  <div class="control-group" align="center">
+    <% f.label :play1, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :script, :play1, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+    </div>
   </div>
   <div class="field">
     <%= f.label :hash1 %><br>

@@ -14,6 +14,7 @@ class SedsController < ApplicationController
   def show
     @sed = Sed.find(params[:id])
     @plays = @sed.plays
+    @scripts = @sed.scripts
   end
 
   # GET /seds/new
