@@ -32,11 +32,12 @@ class Pnameforms::Piece1sController < ApplicationController
   def create
     @pnameform = Pnameform.find(params[:pnameform_id]) 
     @piece1 = current_user.piece1s.build(piece1_params)
-    @piece1.pnameform = @pnameform 
+    @piece1.pnameform = @pnameform
+    title = @piece1.name 
 
     respond_to do |format|
       if @piece1.save
-        format.html { redirect_to pnameform_piece1s_path(@pnameform), notice: 'Piece1 was successfully created.' }
+        format.html { redirect_to pnameform_piece1s_path(@pnameform), notice: "\"#{title}\" was created successfully." }
         format.json { render :show, status: :created, location: @piece1 }
       else
         format.html { render :new }
@@ -50,10 +51,11 @@ class Pnameforms::Piece1sController < ApplicationController
   def update
     @pnameform = Pnameform.find(params[:pnameform_id]) 
     @piece1.pnameform = @pnameform 
+    title = @piece1.name
 
     respond_to do |format|
       if @piece1.update(piece1_params)
-        format.html { redirect_to pnameform_piece1s_path(@pnameform), notice: 'Piece1 was successfully updated.' }
+        format.html { redirect_to pnameform_piece1s_path(@pnameform), notice: "Successfully updated" }
         format.json { render :show, status: :ok, location: @piece1 }
       else
         format.html { render :edit }

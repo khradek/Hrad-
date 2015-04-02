@@ -2,40 +2,2029 @@
 
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="control-group" align="center">
-    <% f.label :play1, class: 'control-label' %>
-    <div class="controls">
-      <%= collection_select( :script, :play1, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
     </div>
-  </div>
-  <div class="field">
-    <%= f.label :hash1 %><br>
-    <%= f.text_field :hash1 %>
-  </div>
-  <div class="field">
-    <%= f.label :down1 %><br>
-    <%= f.text_field :down1 %>
-  </div>
-  <div class="field">
-    <%= f.label :distance1 %><br>
-    <%= f.text_field :distance1 %>
-  </div>
-  <div class="field">
-    <%= f.label :defense1 %><br>
-    <%= f.text_field :defense1 %>
-  </div>
-  <div class="field">
-    <%= f.label :sed_id %><br>
-    <%= f.number_field :sed_id %>
-  </div>
-  <div class="field">
-    <%= f.label :situation1 %><br>
-    <%= f.text_field :situation1 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <br> 
+    <div class="jumbotron vertical-center"> 
+      <div class="container">
+        <table class="table tables">
+          <tr>
+            <td align="center" colspan="5"span style="font-weight:bold">
+              <div class="headerTextbox">
+                <% f.label :situation1 %>
+                <%= f.text_field :situation1 %>
+              </div> 
+            </td>       
+          </tr>
+          <tr>
+          <td align="center">#</td>
+          <td align="center">Hash</td>
+          <td align="center">D-D</td> 
+          <td align="center">Play</td>
+          <td align="center">Defense</td>  
+          <tr>
+            <td align="center">1</td>
+            <td align="center">  
+              <div class="control-group">
+                <% f.label "hash1", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash1, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash1), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down1", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down1, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down1), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance1", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance1, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance1), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>        
+            <td>  
+              <div class="control-group" align="center">
+                <% f.label :play1, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play1, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>
+              </div>    
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense1 %>
+                <%= f.text_field :defense1%>
+              </div> 
+            </td> 
+          </tr> 
+
+          <tr>
+            <td align="center">2</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash2", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash2, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash2), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down2", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down2, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down2), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance2", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance2, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance2), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td>    
+              <div class="control-group">
+                <% f.label :play2, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play2, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense2 %>
+                <%= f.text_field :defense2 %>
+              </div>           
+            </td> 
+          </tr> 
+
+          <tr>
+            <td align="center">3</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash3", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash3, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash3), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down3", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down3, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down3), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance3", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance3, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance3), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td> 
+              <div class="control-group">
+                <% f.label :play3, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play3, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense3 %>
+                <%= f.text_field :defense3 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">4</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash4", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash4, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash4), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down4", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down4, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down4), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance4", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance4, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance4), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play4, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play4, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} )  %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense4 %>
+                <%= f.text_field :defense4 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">5</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash5", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash5, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash5), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down5", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down5, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down5), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance5", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance5, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance5), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td>   
+              <div class="control-group">
+                <% f.label :play5, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play5, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense5 %>
+                <%= f.text_field :defense5 %>
+              </div> 
+            </td>           
+          </tr>
+
+          <tr>
+            <td align="center">6</td>
+            <td align="center">
+              <div class="control-group">
+                 <% f.label "hash6", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash6, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash6), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down6", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down6, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down6), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance6", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance6, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance6), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play6, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play6, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense6 %>
+                <%= f.text_field :defense6 %>
+              </div>
+            </td>            
+          </tr> 
+
+          <tr>
+            <td align="center">7</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash7", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash7, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash7), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down7", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down7, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down7), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance7", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance7, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance7), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play7, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play7, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense7 %>
+                <%= f.text_field :defense7 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">8</td>
+            <td align="center">
+              <div class="control-group">
+                 <% f.label "hash8", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash8, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash8), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down8", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down8, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down8), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance8", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance8, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance8), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td>
+              <div class="control-group">
+                <% f.label :play8, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play8, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense8 %>
+                <%= f.text_field :defense8 %>
+              </div>  
+            </td>          
+          </tr> 
+
+          <tr>
+            <td align="center">9</td>
+            <td align="center">
+              <div class="control-group">
+                 <% f.label "hash9", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash9, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash9), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down9", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down9, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down9), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance9", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance9, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance9), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td>
+              <div class="control-group">
+                <% f.label :play9, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play9, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense9 %>
+                <%= f.text_field :defense9 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">10</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash10", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash10, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash10), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down10", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down10, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down10), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance10", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance10, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance10), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play10, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play10, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense10 %>
+                <%= f.text_field :defense10 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">11</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash11", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash11, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash11), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down11", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down11, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down11), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance11", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance11, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance11), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play11, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play11, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense11 %>
+                <%= f.text_field :defense11 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">12</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash12", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash12, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash12), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down12", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down12, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down12), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance12", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance12, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance12), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play12, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play12, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense12 %>
+                <%= f.text_field :defense12 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">13</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash13", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash13, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash13), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down13", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down13, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down13), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance13", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance13, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance13), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play13, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play13, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense13 %>
+                <%= f.text_field :defense13 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">14</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash14", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash14, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash14), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down14", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down14, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down14), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance14", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance14, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance14), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play14, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play14, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense14 %>
+                <%= f.text_field :defense14 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">15</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash15", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash15, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash15), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down15", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down15, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down15), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance15", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance15, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance15), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play15, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play15, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense15 %>
+                <%= f.text_field :defense15 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">16</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash16", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash16, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash16), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down16", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down16, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down16), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance16", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance16, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance16), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play16, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play16, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense16 %>
+                <%= f.text_field :defense16 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">17</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash17", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash17, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash17), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down17", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down17, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down17), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance17", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance17, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance17), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play17, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play17, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense17 %>
+                <%= f.text_field :defense17 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">18</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash18", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash18, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash18), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down18", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down18, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down18), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance18", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance18, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance18), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play18, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play18, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense18 %>
+                <%= f.text_field :defense18 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">19</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash19", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash19, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash19), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down19", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down19, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down19), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance19", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance19, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance19), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play19, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play19, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense19 %>
+                <%= f.text_field :defense19 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">20</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash20", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash20, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash20), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down20", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down20, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down20), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance20", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance20, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance20), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play20, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play20, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense20 %>
+                <%= f.text_field :defense20 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">21</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash21", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash21, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash21), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down21", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down21, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down21), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance21", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance21, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance21), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play21, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play21, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense21 %>
+                <%= f.text_field :defense21 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">22</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash22", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash22, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash22), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down22", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down22, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down22), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance22", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance22, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance22), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play22, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play22, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense22 %>
+                <%= f.text_field :defense22 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">23</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash23", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash23, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash23), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down23", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down23, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down23), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance23", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance23, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance23), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play23, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play23, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense23 %>
+                <%= f.text_field :defense23 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">24</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash24", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash24, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash24), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down24", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down24, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down24), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance24", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance24, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance24), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play24, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play24, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense24 %>
+                <%= f.text_field :defense24 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">25</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash25", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash25, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash25), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down25", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down25, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down25), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance25", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance25, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['25', '25'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance25), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play25, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play25, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense25 %>
+                <%= f.text_field :defense25 %>
+              </div> 
+            </td>           
+          </tr>                                                                                            
+        </table> 
+        <table class="table tables">
+          <tr>
+            <td align="center" colspan="5"span style="font-weight:bold">
+              <div class="headerTextbox">
+                <% f.label :situation2 %>
+                <%= f.text_field :situation2 %>
+              </div> 
+            </td>       
+          </tr>
+          <tr>
+          <td align="center">#</td>
+          <td align="center">Hash</td>
+          <td align="center">D-D</td> 
+          <td align="center">Play</td>
+          <td align="center">Defense</td>  
+          <tr>
+            <td align="center">1</td>
+            <td align="center">  
+              <div class="control-group">
+                <% f.label "hash26", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash26, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash26), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down26", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down26, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down26), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance26", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance26, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance26), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>        
+            <td>  
+              <div class="control-group" align="center">
+                <% f.label :play26, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play26, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>
+              </div>    
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense26 %>
+                <%= f.text_field :defense26%>
+              </div> 
+            </td> 
+          </tr> 
+
+          <tr>
+            <td align="center">2</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash27", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash27, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash27), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down27", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down27, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down27), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance27", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance27, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance27), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td>    
+              <div class="control-group">
+                <% f.label :play27, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play27, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense27 %>
+                <%= f.text_field :defense27 %>
+              </div>           
+            </td> 
+          </tr> 
+
+          <tr>
+            <td align="center">3</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash28", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash28, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash28), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down28", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down28, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down28), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance28", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance28, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance28), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td> 
+              <div class="control-group">
+                <% f.label :play28, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play28, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense28 %>
+                <%= f.text_field :defense28 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">4</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash29", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash29, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash29), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down29", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down29, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down29), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance29", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance29, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance29), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play29, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play29, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} )  %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense29 %>
+                <%= f.text_field :defense29 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">5</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash30", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash30, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash30), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down30", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down30, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down30), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance30", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance30, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance30), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td>   
+              <div class="control-group">
+                <% f.label :play30, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play30, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense30 %>
+                <%= f.text_field :defense30 %>
+              </div> 
+            </td>           
+          </tr>
+
+          <tr>
+            <td align="center">6</td>
+            <td align="center">
+              <div class="control-group">
+                 <% f.label "hash31", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash31, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash31), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down31", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down31, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down31), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance31", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance31, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance31), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play31, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play31, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense31 %>
+                <%= f.text_field :defense31 %>
+              </div>
+            </td>            
+          </tr> 
+
+          <tr>
+            <td align="center">7</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash32", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash32, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash32), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down32", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down32, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down32), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance32", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance32, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance32), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play32, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play32, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense32 %>
+                <%= f.text_field :defense32 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">8</td>
+            <td align="center">
+              <div class="control-group">
+                 <% f.label "hash33", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash33, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash33), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down33", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down33, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down33), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance33", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance33, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance33), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td>
+              <div class="control-group">
+                <% f.label :play33, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play33, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense33 %>
+                <%= f.text_field :defense33 %>
+              </div>  
+            </td>          
+          </tr> 
+
+          <tr>
+            <td align="center">9</td>
+            <td align="center">
+              <div class="control-group">
+                 <% f.label "hash34", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash34, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash34), { include_blank: true}) %>
+                </div>
+              </div>
+            </td>
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down34", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down34, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down34), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance34", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance34, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance34), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td> 
+            <td>
+              <div class="control-group">
+                <% f.label :play34, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play34, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense34 %>
+                <%= f.text_field :defense34 %>
+              </div> 
+            </td>           
+          </tr> 
+
+          <tr>
+            <td align="center">10</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash35", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash35, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash35), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down35", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down35, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down35), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance35", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance35, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance35), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play35, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play35, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense35 %>
+                <%= f.text_field :defense35 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">11</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash36", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash36, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash36), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down36", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down36, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down36), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance36", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance36, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance36), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play36, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play36, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense36 %>
+                <%= f.text_field :defense36 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">12</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash37", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash37, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash37), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down37", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down37, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down37), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance37", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance37, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance37), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play37, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play37, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense37 %>
+                <%= f.text_field :defense37 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">13</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash38", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash38, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash38), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down38", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down38, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down38), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance38", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance38, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance38), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play38, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play38, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense38 %>
+                <%= f.text_field :defense38 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">14</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash39", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash39, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash39), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down39", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down39, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down39), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance39", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance39, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance39), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play39, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play39, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense39 %>
+                <%= f.text_field :defense39 %>
+              </div> 
+            </td>           
+          </tr>  
+          
+          <tr>
+            <td align="center">15</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash40", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash40, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash40), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down40", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down40, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down40), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance40", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance40, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance40), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play40, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play40, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense40 %>
+                <%= f.text_field :defense40 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">16</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash41", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash41, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash41), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down41", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down41, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down41), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance41", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance41, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance41), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play41, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play41, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense41 %>
+                <%= f.text_field :defense41 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">17</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash42", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash42, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash42), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down42", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down42, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down42), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance42", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance42, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance42), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play42, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play42, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense42 %>
+                <%= f.text_field :defense42 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">18</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash43", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash43, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash43), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down43", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down43, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down43), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance43", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance43, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance43), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play43, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play43, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense43 %>
+                <%= f.text_field :defense43 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">19</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash44", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash44, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash44), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down44", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down44, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down44), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance44", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance44, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance44), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play44, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play44, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense44 %>
+                <%= f.text_field :defense44 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">20</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash45", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash45, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash45), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down45", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down45, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down45), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance45", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance45, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance45), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play45, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play45, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense45 %>
+                <%= f.text_field :defense45 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">21</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash46", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash46, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash46), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down46", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down46, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down46), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance46", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance46, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance46), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play46, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play46, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense46 %>
+                <%= f.text_field :defense46 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">22</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash47", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash47, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash47), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down47", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down47, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down47), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance47", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance47, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance47), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play47, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play47, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense47 %>
+                <%= f.text_field :defense47 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">23</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash48", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash48, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash48), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down48", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down48, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down48), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance48", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance48, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance48), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play48, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play48, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense48 %>
+                <%= f.text_field :defense48 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">24</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash49", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash49, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash49), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down49", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down49, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down49), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance49", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance49, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance49), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play49, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play49, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense49 %>
+                <%= f.text_field :defense49 %>
+              </div> 
+            </td>           
+          </tr>  
+          <tr>
+            <td align="center">25</td>
+            <td align="center">
+              <div class="control-group">
+                <% f.label "hash50", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:hash50, options_for_select([['L', 'L'], ['M', 'M'], ['R', 'R']], :selected => f.object.hash50), { include_blank: true}) %>
+                </div>
+              </div>
+            </td> 
+            <td align="center"> 
+              <div style="float: left">
+                <% f.label "down50", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:down50, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], :selected => f.object.down50), { include_blank: true}) %> 
+                </div>
+              </div>     
+              <div style="float: left">
+                <% f.label "distance50", class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select(:distance50, options_for_select([['In', 'In'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['25', '25'], ['11', '11'], ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'], ['18', '18'], ['19', '19'], ['20', '20'], ['21', '21'], ['22', '22'], ['23', '23'], ['24', '24'], ['25', '25'], ['26', '26'], ['27', '27'], ['28', '28'], ['29', '29'], ['30', '30']], :selected => f.object.distance50), { include_blank: true}) %> 
+                </div>
+              </div>
+            </td>  
+            <td> 
+              <div class="control-group">
+                <% f.label :play50, class: 'control-label' %>
+                <div class="controls">
+                  <%= collection_select( :script, :play50, @sed.plays, :fullname, :fullname, { :include_blank => true}, { :multiple => false} ) %> 
+                </div>  
+              </div>
+            </td>
+            <td align="center">
+              <div class="resizedTextbox">
+                <% f.label :defense50 %>
+                <%= f.text_field :defense50 %>
+              </div> 
+            </td>           
+          </tr>                                                                                            
+        </table>         
+        <br>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </div>  
+    </div>  
+  </div>   
+
+
 <% end %>

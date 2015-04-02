@@ -3,9 +3,17 @@
 <div style "float: left"> 
   <table class="table table-bordered">
     <tr>
-      <td><%= @pnameform.pname1 %></td>      
-      <td><%= link_to "Add or Edit #{@pnameform.pname1}s ", pnameform_piece1s_path(@pnameform) %></td> 
+      <td><%= @pnameform.pname1 %>s</td>      
+        <td><% @piece1s.each do |piece1| %>
+          <%= piece1.name %>
+        <% end %>     
+        <%= link_to "Add or Edit #{@pnameform.pname1}s ", pnameform_piece1s_path(@pnameform) %></td> 
     </tr>
+
+
+
+
+
     <tr>
       <td><%= @pnameform.pname2 %></td>      
       <td><%= link_to "Add or Edit #{@pnameform.pname2}s", pnameform_piece2s_path(@pnameform) %></td> 
