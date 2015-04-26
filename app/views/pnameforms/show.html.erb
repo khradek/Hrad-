@@ -1,284 +1,283 @@
 <p id="notice"><%= notice %></p>
 
+<center><h1>Play Database</h1></center>
+<br>
 <div style "float: left"> 
   <table class="table table-bordered">
     <tr>
-      <td rowspan="3"><%= @pnameform.pname1 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname1 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece1s.each do |piece1| %>
-        <%= piece1.name %>
-      <% end %></td>
+      <td><strong><%= @piece1s.map{|piece1| piece1.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname1}s ", pnameform_piece1s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname1.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece1s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname2 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname2 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece2s.each do |piece2| %>
-        <%= piece2.name %>
-      <% end %></td>
+      <td><strong><%= @piece2s.map{|piece2| piece2.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname2}s ", pnameform_piece2s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname2.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece2s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname3 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname3 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece3s.each do |piece3| %>
-        <%= piece3.name %>
-      <% end %></td>
+      <td><strong><%= @piece3s.map{|piece3| piece3.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname3}s ", pnameform_piece3s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname3.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece3s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname4 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname4 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece4s.each do |piece4| %>
-        <%= piece4.name %>
-      <% end %></td>
+      <td><strong><%= @piece4s.map{|piece4| piece4.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname4}s ", pnameform_piece4s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname4.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece4s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname5 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname5 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece5s.each do |piece5| %>
-        <%= piece5.name %>
-      <% end %></td>
+      <td><strong><%= @piece5s.map{|piece5| piece5.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname5}s ", pnameform_piece5s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname5.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece5s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname6 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname6 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece6s.each do |piece6| %>
-        <%= piece6.name %>
-      <% end %></td>
+      <td><strong><%= @piece6s.map{|piece6| piece6.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname6}s ", pnameform_piece6s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname6.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece6s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname7 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname7 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece7s.each do |piece7| %>
-        <%= piece7.name %>
-      <% end %></td>
+      <td><strong><%= @piece7s.map{|piece7| piece7.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname7}s ", pnameform_piece7s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname7.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece7s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname8 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname8 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece8s.each do |piece8| %>
-        <%= piece8.name %>
-      <% end %></td>
+      <td><strong><%= @piece8s.map{|piece8| piece8.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname8}s ", pnameform_piece8s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname8.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece8s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname9 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname9 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece9s.each do |piece9| %>
-        <%= piece9.name %>
-      <% end %></td>
+      <td><strong><%= @piece9s.map{|piece9| piece9.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname9}s ", pnameform_piece9s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname9.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece9s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname10 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname10 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece10s.each do |piece10| %>
-        <%= piece10.name %>
-      <% end %></td>
+      <td><strong><%= @piece10s.map{|piece10| piece10.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname10}s ", pnameform_piece10s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname10.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece10s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname11 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname11 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece11s.each do |piece11| %>
-        <%= piece11.name %>
-      <% end %></td>
+      <td><strong><%= @piece11s.map{|piece11| piece11.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname11}s ", pnameform_piece11s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname11.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece11s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname12 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname12 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece12s.each do |piece12| %>
-        <%= piece12.name %>
-      <% end %></td>
+      <td><strong><%= @piece12s.map{|piece12| piece12.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname12}s ", pnameform_piece12s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname12.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece12s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname13 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname13 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece13s.each do |piece13| %>
-        <%= piece13.name %>
-      <% end %></td>
+      <td><strong><%= @piece13s.map{|piece13| piece13.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname13}s ", pnameform_piece13s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname13.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece13s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname14 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname14 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece14s.each do |piece14| %>
-        <%= piece14.name %>
-      <% end %></td>
+      <td><strong><%= @piece14s.map{|piece14| piece14.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname14}s ", pnameform_piece14s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname14.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece14s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname15 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname15 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece15s.each do |piece15| %>
-        <%= piece15.name %>
-      <% end %></td>
+      <td><strong><%= @piece15s.map{|piece15| piece15.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname15}s ", pnameform_piece15s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname15.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece15s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname16 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname16 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece16s.each do |piece16| %>
-        <%= piece16.name %>
-      <% end %></td>
+      <td><strong><%= @piece16s.map{|piece16| piece16.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname16}s ", pnameform_piece16s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname16.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece16s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname17 %></td>  
+      <td rowspan="3"><strong><%= @pnameform.pname17 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece17s.each do |piece17| %>
-        <%= piece17.name %>
-      <% end %></td>
+      <td><strong><%= @piece17s.map{|piece17| piece17.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit", pnameform_piece17s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname17.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece17s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname18 %></td>  
+      <td rowspan="3"><strong><%= @pnameform.pname18 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece18s.each do |piece18| %>
-        <%= piece18.name %>
-      <% end %></td>
+      <td><strong><%= @piece18s.map{|piece18| piece18.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit", pnameform_piece18s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname18.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece18s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname19 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname19 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece19s.each do |piece19| %>
-        <%= piece19.name %>
-      <% end %></td>
+      <td><strong><%= @piece19s.map{|piece19| piece19.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname19}s ", pnameform_piece19s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname19.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece19s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname20 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname20 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece20s.each do |piece20| %>
-        <%= piece20.name %>
-      <% end %></td>
+      <td><strong><%= @piece20s.map{|piece20| piece20.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname20}s ", pnameform_piece20s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname20.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece20s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname21 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname21 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece21s.each do |piece21| %>
-        <%= piece21.name %>
-      <% end %></td>
+      <td><strong><%= @piece21s.map{|piece21| piece21.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname21}s ", pnameform_piece21s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname21.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece21s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname22 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname22 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece22s.each do |piece22| %>
-        <%= piece22.name %>
-      <% end %></td>
+      <td><strong><%= @piece22s.map{|piece22| piece22.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname22}s ", pnameform_piece22s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname22.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece22s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname23 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname23 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece23s.each do |piece23| %>
-        <%= piece23.name %>
-      <% end %></td>
+      <td><strong><%= @piece23s.map{|piece23| piece23.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname23}s ", pnameform_piece23s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname23.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece23s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname24 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname24 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece24s.each do |piece24| %>
-        <%= piece24.name %>
-      <% end %></td>
+      <td><strong><%= @piece24s.map{|piece24| piece24.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname24}s ", pnameform_piece24s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname24.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece24s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
-
 
     <tr>
-      <td rowspan="3"><%= @pnameform.pname25 %>s</td>  
+      <td rowspan="3"><strong><%= @pnameform.pname25 %></strong></td>  
     </tr>
     <tr>    
-      <td><% @piece25s.each do |piece25| %>
-        <%= piece25.name %>
-      <% end %></td>
+      <td><strong><%= @piece25s.map{|piece25| piece25.name}.join(", ") %></strong></td>          
     </tr>        
-      <td><%= link_to "Add or Edit #{@pnameform.pname25}s ", pnameform_piece25s_path(@pnameform) %></td> 
+      <td><% unless @pnameform.pname25.blank? %> 
+        <%= link_to "Add or Edit", pnameform_piece25s_path(@pnameform) %>
+      <% end %></td>  
     </tr>
-  
-
   </table>                      
 </div> 
 
