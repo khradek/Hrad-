@@ -1,4 +1,4 @@
-<h1></h1>
+<h1><%= @pnameform.pname6 %>s</h1>
 
 <table>
   <thead>
@@ -21,5 +21,5 @@
 
 <br>
 
-<%= link_to 'New Piece6', new_pnameform_piece6_path %>
+<%= link_to "New #{@pnameform.pname6}", new_pnameform_piece6_path %>
 <%= link_to 'Back', @pnameform %>
