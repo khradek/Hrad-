@@ -1,25 +1,28 @@
-<h1></h1>
+<h1><%= @pnameform.pname21 %>s</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @piece21s.each do |piece21| %>
+<div class="media">
+  <div class="media-body">
+    <table class="table table hover">
+    <thead>
       <tr>
-        <td><%= piece21.name %></td>
-        <td><%= link_to 'Edit', edit_pnameform_piece21_path(@pnameform, piece21) %></td>
-        <td><%= link_to 'Destroy', [@pnameform, piece21], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @piece21s.each do |piece21| %>
+        <tr>
+          <td><strong><%= piece21.name %></strong></td>
+          <td><%= link_to 'Edit', edit_pnameform_piece21_path(@pnameform, piece21) %></td>
+          <td><%= link_to 'Delete', [@pnameform, piece21], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    </table>
+  </div>  
+</div> 
 <br>
 
-<%= link_to 'New Piece21', new_pnameform_piece21_path %>
+<%= link_to "New #{@pnameform.pname21}", new_pnameform_piece21_path %>
 <%= link_to 'Back', @pnameform %>
