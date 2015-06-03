@@ -18,7 +18,7 @@
         <% @plays.each do |play| %>
           <tr>
             <td><%= play.fullname %></td>
-            <td><%= link_to 'Edit', edit_sed_play_path(@sed, play) %>
+            <td><%= link_to 'Edit', edit_sed_play_path(@sed, play) %></td>
             <td><%= link_to 'Delete', [@sed, play], method: :delete, confirm: "Are you sure?" %></td>
           </tr>
         <% end %>
@@ -41,7 +41,8 @@
         <% @scripts.each do |script| %>
           <tr>
             <td><%= script.name %></td>
-            <td><%= link_to 'Edit', edit_sed_script_path(@sed, script) %>
+            <td><%= link_to 'View', sed_script_path(@sed, script) %></td>
+            <td><%= link_to 'Edit', edit_sed_script_path(@sed, script) %></td>
             <td><%= link_to 'Delete', [@sed, script], method: :delete, confirm: "Are you sure?" %></td>
           </tr>
         <% end %>
