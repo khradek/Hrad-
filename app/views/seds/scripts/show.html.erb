@@ -1,17 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<center><h1><%= @script.name %></h1></center>
+  
+<h4><%= @script.name %></h4>
 <br>
 
-<div style="float: left"> 
-  <table class="table table-bordered">
-    <tr><td colspan ="5"><center><h4><%= @script.situation1 %></h4></center></td></tr>
+<div style="float: left;"> 
+  <table class="table table-bordered" id="MyStyledTable">
+    <tr><td colspan ="5" ><center><h6><%= @script.situation1 %></h6></center></td></tr>
     <tr>
-      <th>#</th>
-      <th>Hash</th>
-      <th>D-D</th>
-      <th>Play</th>
-      <th>Defense</th> 
+      <th style="font-size: 10px;">#</th>
+      <th style="font-size: 10px;">Hash</th>
+      <th style="font-size: 10px;">D-D</th>
+      <th style="font-size: 10px;">Play</th>
+      <th style="font-size: 10px;">Defense</th> 
     </tr>
     <tr>
       <td>1</td>
@@ -191,14 +192,14 @@
 </div>
 
 <div style="float: left"> 
-  <table class="table table-bordered">
-    <tr><td colspan ="5"><center><h4><%= @script.situation2 %></h4></center></td></tr>
+  <table class="table table-bordered" id="MyStyledTable">
+    <tr><td colspan ="5"><center><h6><%= @script.situation2 %></h6></center></td></tr>
     <tr>
-      <th>#</th>
-      <th>Hash</th>
-      <th>D-D</th>
-      <th>Play</th>
-      <th>Defense</th> 
+      <th style="font-size: 10px;">#</th>
+      <th style="font-size: 10px;">Hash</th>
+      <th style="font-size: 10px;">D-D</th>
+      <th style="font-size: 10px;">Play</th>
+      <th style="font-size: 10px;">Defense</th> 
     </tr>
     <tr>
       <td>1</td>
@@ -376,3 +377,381 @@
     </tr>      
   </table>    
 </div>
+
+<div style="float: left">
+  <div style="float: left"> 
+    <table class="table table-bordered" id="MyStyledTable">
+      <tr><td colspan ="5"><center><h6><%= @script.situation3 %></h6></center></td></tr>
+      <tr>
+        <th style="font-size: 10px;">#</th>
+        <th style="font-size: 10px;">Hash</th>
+        <th style="font-size: 10px;">D-D</th>
+        <th style="font-size: 10px;">Play</th>
+        <th style="font-size: 10px;">Defense</th> 
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><%= @script.hash51 %></td>
+        <td><%= @script.down51 %>-<%= @script.distance51 %></td>
+        <td><%= @script.play51 %></td>
+        <td><%= @script.defense51 %></td>  
+      </tr>  
+      <tr>
+        <td>2</td>
+        <td><%= @script.hash52 %></td>
+        <td><%= @script.down52 %>-<%= @script.distance52 %></td>
+        <td><%= @script.play52 %></td>
+        <td><%= @script.defense52 %></td>  
+      </tr> 
+      <tr>
+        <td>3</td>
+        <td><%= @script.hash53 %></td>
+        <td><%= @script.down53 %>-<%= @script.distance53 %></td>
+        <td><%= @script.play53 %></td>
+        <td><%= @script.defense53 %></td>  
+      </tr> 
+      <tr>
+        <td>4</td>
+        <td><%= @script.hash54 %></td>
+        <td><%= @script.down54 %>-<%= @script.distance54 %></td>
+        <td><%= @script.play54 %></td>
+        <td><%= @script.defense54 %></td>  
+      </tr> 
+      <tr>
+        <td>5</td>
+        <td><%= @script.hash55 %></td>
+        <td><%= @script.down55 %>-<%= @script.distance55 %></td>
+        <td><%= @script.play55 %></td>
+        <td><%= @script.defense55 %></td>  
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><%= @script.hash56 %></td>
+        <td><%= @script.down56 %>-<%= @script.distance56 %></td>
+        <td><%= @script.play56 %></td>
+        <td><%= @script.defense56 %></td>  
+      </tr> 
+      <tr>
+        <td>7</td>
+        <td><%= @script.hash57 %></td>
+        <td><%= @script.down57 %>-<%= @script.distance57 %></td>
+        <td><%= @script.play57 %></td>
+        <td><%= @script.defense57 %></td>  
+      </tr> 
+      <tr>
+        <td>8</td>
+        <td><%= @script.hash58 %></td>
+        <td><%= @script.down58 %>-<%= @script.distance58 %></td>
+        <td><%= @script.play58 %></td>
+        <td><%= @script.defense58 %></td>  
+      </tr> 
+      <tr>
+        <td>9</td>
+        <td><%= @script.hash59 %></td>
+        <td><%= @script.down59 %>-<%= @script.distance59 %></td>
+        <td><%= @script.play59 %></td>
+        <td><%= @script.defense59 %></td>  
+      </tr> 
+      <tr>
+        <td>10</td>
+        <td><%= @script.hash60 %></td>
+        <td><%= @script.down60 %>-<%= @script.distance60 %></td>
+        <td><%= @script.play60 %></td>
+        <td><%= @script.defense60 %></td>  
+      </tr>  
+        <td>11</td>
+        <td><%= @script.hash61 %></td>
+        <td><%= @script.down61 %>-<%= @script.distance61 %></td>
+        <td><%= @script.play61 %></td>
+        <td><%= @script.defense61 %></td>  
+      </tr>  
+      <tr>
+        <td>12</td>
+        <td><%= @script.hash62 %></td>
+        <td><%= @script.down62 %>-<%= @script.distance62 %></td>
+        <td><%= @script.play62 %></td>
+        <td><%= @script.defense62 %></td>  
+      </tr> 
+      <tr>
+        <td>13</td>
+        <td><%= @script.hash63 %></td>
+        <td><%= @script.down63 %>-<%= @script.distance63 %></td>
+        <td><%= @script.play63 %></td>
+        <td><%= @script.defense63 %></td>  
+      </tr> 
+      <tr>
+        <td>14</td>
+        <td><%= @script.hash64 %></td>
+        <td><%= @script.down64 %>-<%= @script.distance64 %></td>
+        <td><%= @script.play64 %></td>
+        <td><%= @script.defense64 %></td>  
+      </tr> 
+      <tr>
+        <td>15</td>
+        <td><%= @script.hash65 %></td>
+        <td><%= @script.down65 %>-<%= @script.distance65 %></td>
+        <td><%= @script.play65 %></td>
+        <td><%= @script.defense65 %></td>  
+      </tr> 
+      <tr>
+        <td>16</td>
+        <td><%= @script.hash66 %></td>
+        <td><%= @script.down66 %>-<%= @script.distance66 %></td>
+        <td><%= @script.play66 %></td>
+        <td><%= @script.defense66 %></td>  
+      </tr> 
+      <tr>
+        <td>17</td>
+        <td><%= @script.hash67 %></td>
+        <td><%= @script.down67 %>-<%= @script.distance67 %></td>
+        <td><%= @script.play67 %></td>
+        <td><%= @script.defense67 %></td>  
+      </tr> 
+      <tr>
+        <td>18</td>
+        <td><%= @script.hash68 %></td>
+        <td><%= @script.down68 %>-<%= @script.distance68 %></td>
+        <td><%= @script.play68 %></td>
+        <td><%= @script.defense68 %></td>  
+      </tr> 
+      <tr>
+        <td>19</td>
+        <td><%= @script.hash69 %></td>
+        <td><%= @script.down69 %>-<%= @script.distance69 %></td>
+        <td><%= @script.play69 %></td>
+        <td><%= @script.defense69 %></td>  
+      </tr> 
+      <tr>
+        <td>20</td>
+        <td><%= @script.hash70 %></td>
+        <td><%= @script.down70 %>-<%= @script.distance70 %></td>
+        <td><%= @script.play70 %></td>
+        <td><%= @script.defense70 %></td>  
+      </tr>  
+      <tr>
+        <td>21</td>
+        <td><%= @script.hash71 %></td>
+        <td><%= @script.down71 %>-<%= @script.distance71 %></td>
+        <td><%= @script.play71 %></td>
+        <td><%= @script.defense71 %></td>  
+      </tr> 
+      <tr>
+        <td>22</td>
+        <td><%= @script.hash72 %></td>
+        <td><%= @script.down72 %>-<%= @script.distance72 %></td>
+        <td><%= @script.play72 %></td>
+        <td><%= @script.defense72 %></td>  
+      </tr> 
+      <tr>
+        <td>23</td>
+        <td><%= @script.hash73 %></td>
+        <td><%= @script.down73 %>-<%= @script.distance73 %></td>
+        <td><%= @script.play73 %></td>
+        <td><%= @script.defense73 %></td>  
+      </tr> 
+      <tr>
+        <td>24</td>
+        <td><%= @script.hash74 %></td>
+        <td><%= @script.down74 %>-<%= @script.distance74 %></td>
+        <td><%= @script.play74 %></td>
+        <td><%= @script.defense74 %></td>  
+      </tr> 
+      <tr>
+        <td>25</td>
+        <td><%= @script.hash75 %></td>
+        <td><%= @script.down75 %>-<%= @script.distance75 %></td>
+        <td><%= @script.play75 %></td>
+        <td><%= @script.defense75 %></td>  
+      </tr>      
+    </table>    
+  </div>
+</div>  
+
+<div style="float: left"> 
+  <table class="table table-bordered" id="MyStyledTable">
+    <tr><td colspan ="5"><center><h6><%= @script.situation4 %></h6></center></td></tr>
+    <tr>
+      <th style="font-size: 10px;">#</th>
+      <th style="font-size: 10px;">Hash</th>
+      <th style="font-size: 10px;">D-D</th>
+      <th style="font-size: 10px;">Play</th>
+      <th style="font-size: 10px;">Defense</th> 
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><%= @script.hash76 %></td>
+      <td><%= @script.down76 %>-<%= @script.distance76 %></td>
+      <td><%= @script.play76 %></td>
+      <td><%= @script.defense76 %></td>  
+    </tr>  
+    <tr>
+      <td>2</td>
+      <td><%= @script.hash77 %></td>
+      <td><%= @script.down77 %>-<%= @script.distance77 %></td>
+      <td><%= @script.play77 %></td>
+      <td><%= @script.defense77 %></td>  
+    </tr> 
+    <tr>
+      <td>3</td>
+      <td><%= @script.hash78 %></td>
+      <td><%= @script.down78 %>-<%= @script.distance78 %></td>
+      <td><%= @script.play78 %></td>
+      <td><%= @script.defense78 %></td>  
+    </tr> 
+    <tr>
+      <td>4</td>
+      <td><%= @script.hash79 %></td>
+      <td><%= @script.down79 %>-<%= @script.distance79 %></td>
+      <td><%= @script.play79 %></td>
+      <td><%= @script.defense79 %></td>  
+    </tr> 
+    <tr>
+      <td>5</td>
+      <td><%= @script.hash80 %></td>
+      <td><%= @script.down80 %>-<%= @script.distance80 %></td>
+      <td><%= @script.play80 %></td>
+      <td><%= @script.defense80 %></td>  
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><%= @script.hash81 %></td>
+      <td><%= @script.down81 %>-<%= @script.distance81 %></td>
+      <td><%= @script.play81 %></td>
+      <td><%= @script.defense81 %></td>  
+    </tr> 
+    <tr>
+      <td>7</td>
+      <td><%= @script.hash82 %></td>
+      <td><%= @script.down82 %>-<%= @script.distance82 %></td>
+      <td><%= @script.play82 %></td>
+      <td><%= @script.defense82 %></td>  
+    </tr> 
+    <tr>
+      <td>8</td>
+      <td><%= @script.hash83 %></td>
+      <td><%= @script.down83 %>-<%= @script.distance83 %></td>
+      <td><%= @script.play83 %></td>
+      <td><%= @script.defense83 %></td>  
+    </tr> 
+    <tr>
+      <td>9</td>
+      <td><%= @script.hash84 %></td>
+      <td><%= @script.down84 %>-<%= @script.distance84 %></td>
+      <td><%= @script.play84 %></td>
+      <td><%= @script.defense84 %></td>  
+    </tr> 
+    <tr>
+      <td>10</td>
+      <td><%= @script.hash85 %></td>
+      <td><%= @script.down85 %>-<%= @script.distance85 %></td>
+      <td><%= @script.play85 %></td>
+      <td><%= @script.defense85 %></td>  
+    </tr>  
+      <td>11</td>
+      <td><%= @script.hash86 %></td>
+      <td><%= @script.down86 %>-<%= @script.distance86 %></td>
+      <td><%= @script.play86 %></td>
+      <td><%= @script.defense86 %></td>  
+    </tr>  
+    <tr>
+      <td>12</td>
+      <td><%= @script.hash87 %></td>
+      <td><%= @script.down87 %>-<%= @script.distance87 %></td>
+      <td><%= @script.play87 %></td>
+      <td><%= @script.defense87 %></td>  
+    </tr> 
+    <tr>
+      <td>13</td>
+      <td><%= @script.hash88 %></td>
+      <td><%= @script.down88 %>-<%= @script.distance88 %></td>
+      <td><%= @script.play88 %></td>
+      <td><%= @script.defense88 %></td>  
+    </tr> 
+    <tr>
+      <td>14</td>
+      <td><%= @script.hash89 %></td>
+      <td><%= @script.down89 %>-<%= @script.distance89 %></td>
+      <td><%= @script.play89 %></td>
+      <td><%= @script.defense89 %></td>  
+    </tr> 
+    <tr>
+      <td>15</td>
+      <td><%= @script.hash90 %></td>
+      <td><%= @script.down90 %>-<%= @script.distance90 %></td>
+      <td><%= @script.play90 %></td>
+      <td><%= @script.defense90 %></td>  
+    </tr> 
+    <tr>
+      <td>16</td>
+      <td><%= @script.hash91 %></td>
+      <td><%= @script.down91 %>-<%= @script.distance91 %></td>
+      <td><%= @script.play91 %></td>
+      <td><%= @script.defense91 %></td>  
+    </tr> 
+    <tr>
+      <td>17</td>
+      <td><%= @script.hash92 %></td>
+      <td><%= @script.down92 %>-<%= @script.distance92 %></td>
+      <td><%= @script.play92 %></td>
+      <td><%= @script.defense92 %></td>  
+    </tr> 
+    <tr>
+      <td>18</td>
+      <td><%= @script.hash93 %></td>
+      <td><%= @script.down93 %>-<%= @script.distance93 %></td>
+      <td><%= @script.play93 %></td>
+      <td><%= @script.defense93 %></td>  
+    </tr> 
+    <tr>
+      <td>19</td>
+      <td><%= @script.hash94 %></td>
+      <td><%= @script.down94 %>-<%= @script.distance94 %></td>
+      <td><%= @script.play94 %></td>
+      <td><%= @script.defense94 %></td>  
+    </tr> 
+    <tr>
+      <td>20</td>
+      <td><%= @script.hash95 %></td>
+      <td><%= @script.down95 %>-<%= @script.distance95 %></td>
+      <td><%= @script.play95 %></td>
+      <td><%= @script.defense95 %></td>  
+    </tr>  
+    <tr>
+      <td>21</td>
+      <td><%= @script.hash96 %></td>
+      <td><%= @script.down96 %>-<%= @script.distance96 %></td>
+      <td><%= @script.play96 %></td>
+      <td><%= @script.defense96 %></td>  
+    </tr> 
+    <tr>
+      <td>22</td>
+      <td><%= @script.hash97 %></td>
+      <td><%= @script.down97 %>-<%= @script.distance97 %></td>
+      <td><%= @script.play97 %></td>
+      <td><%= @script.defense97 %></td>  
+    </tr> 
+    <tr>
+      <td>23</td>
+      <td><%= @script.hash98 %></td>
+      <td><%= @script.down98 %>-<%= @script.distance98 %></td>
+      <td><%= @script.play98 %></td>
+      <td><%= @script.defense98 %></td>  
+    </tr> 
+    <tr>
+      <td>24</td>
+      <td><%= @script.hash99 %></td>
+      <td><%= @script.down99 %>-<%= @script.distance99 %></td>
+      <td><%= @script.play99 %></td>
+      <td><%= @script.defense99 %></td>  
+    </tr> 
+    <tr>
+      <td>25</td>
+      <td><%= @script.hash100 %></td>
+      <td><%= @script.down100 %>-<%= @script.distance100 %></td>
+      <td><%= @script.play100 %></td>
+      <td><%= @script.defense100 %></td>  
+    </tr>      
+  </table>    
+</div>
+<div style="clear:both;"></div>
+<h4><%= link_to 'Edit Script', edit_sed_script_path(@sed, @script) %></h4>
